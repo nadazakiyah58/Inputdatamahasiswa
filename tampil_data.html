@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2 class="form-title">Tampil Data Mahasiswa</h2>
+    
+    <table class="tampil-table">
+        <thead>
+            <tr>
+                <th width="5%">No</th>
+                <th width="20%">NPM</th>
+                <th width="40%">Nama Mahasiswa</th>
+                <th width="35%">Alamat</th>
+            </tr>
+        </thead>
+        <tbody id="tabel-isi">
+            </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="hapusSemua()" style="padding: 10px; cursor: pointer; background: #d71920; color: white; border: none; border-radius: 4px;">Kosongkan Tabel</button>
+    </div>
+
+    <script>
+        function tampilkanData() {
+            const tabel = document.getElementById('tabel-isi');
+            const dataTersimpan = JSON.parse(localStorage.getItem('dataMhs')) || [];
+
+            if (dataTersimpan.length > 0) {
+                tabel.innerHTML = ""; // Bersihkan pesan "Belum ada data"
+                dataTersimpan.forEach((mhs, index) => {
+                    let row = `<tr>
+                        <td>${index + 1}</td>
+                        <td>${mhs.npm}</td>
+                        <td>${mhs.nama}</td>
+                        <td>${mhs.alamat}</td>
+                    </tr>`;
+                    tabel.innerHTML += row;
+                });
+            } else {
+                tabel.innerHTML = '<tr><td colspan="4">Belum ada data diinput</td></tr>';
+            }
+        }
+
+        function hapusSemua() {
+            if(confirm("Hapus semua data di tabel?")) {
+                localStorage.removeItem('dataMhs');
+                location.reload();
+            }
+        }
+
+        // Jalankan fungsi saat halaman dibuka
+        tampilkanData();
+    </script>
+</body>
+</html>

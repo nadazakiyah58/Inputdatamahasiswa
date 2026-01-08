@@ -1,0 +1,170 @@
+/* --- 1. PENGATURAN GLOBAL --- */
+* {
+    font-family: "Times New Roman", Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    overflow: hidden; /* Menghilangkan scrollbar di frame utama */
+}
+
+/* Latar Belakang Biru Muda untuk Frame Header & Footer */
+.bg-light-blue {
+    background-color: #add8e6;
+    height: 100%;
+    width: 100%;
+}
+
+/* --- 2. HEADER (header.html) --- */
+.header-table { 
+    width: 100%; 
+    height: 135px; 
+    border-collapse: collapse; 
+}
+
+.logo-container { 
+    width: 240px; 
+    text-align: center;
+}
+
+.logo-container img {
+    width: 85px; 
+    height: auto;
+}
+
+.title-container { 
+    text-align: center; 
+    padding-right: 240px; /* Menyeimbangkan posisi agar judul tetap di tengah */
+}
+
+.title-container h2 { 
+    margin: 0; 
+    font-size: 22px; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.title-container p { 
+    margin: 5px 0 0 0; 
+    font-size: 16px;
+    font-weight: bold; /* Alamat Kampus Tebal */
+}
+
+/* --- 3. SIDEBAR / MENU (sidebar.html) --- */
+.sidebar-container { 
+    text-align: center; 
+    padding-top: 10px; 
+}
+
+.menu-box { 
+    background-color: #d71920; 
+    width: 200px; 
+    margin: 5px auto; 
+    border: 1px solid #000; 
+}
+
+.menu-box a { 
+    display: block; 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    border-bottom: 1px solid rgba(255,255,255,0.3); 
+}
+
+.menu-box a:hover { 
+    background-color: #b31419; 
+    color: #ffd700; 
+}
+
+/* --- 4. FORM INPUT (input_mahasiswa.html) --- */
+.form-title { 
+    text-align: center; 
+    margin: 10px 0; 
+    font-weight: bold; 
+    font-size: 20px; 
+}
+
+.input-table { 
+    margin: 0 auto; 
+}
+
+.input-table td { 
+    padding: 5px; 
+    font-size: 16px; 
+}
+
+input[type="text"], textarea { 
+    width: 300px; 
+    padding: 6px; 
+    border: 1px solid #333; 
+    font-size: 14px;
+}
+
+textarea { 
+    height: 80px; 
+    resize: none; 
+}
+
+.btn-submit { 
+    background-color: #4CAF50; 
+    color: white; 
+    width: 100%; 
+    padding: 10px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    font-size: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+/* --- 5. TABEL JADWAL & TAMPIL DATA --- */
+.jadwal-table, .tampil-table { 
+    width: 95%; 
+    margin: 10px auto; 
+    border-collapse: collapse; 
+    background-color: white;
+}
+
+.jadwal-table th, .jadwal-table td, 
+.tampil-table th, .tampil-table td { 
+    border: 1px solid #000; 
+    padding: 8px; 
+    text-align: center;
+}
+
+/* Pewarnaan Header & Kolom Jadwal Kuliah */
+.kolom-waktu  { background-color: #f2f2f2 !important; }
+.kolom-senin  { background-color: #ffdada !important; }
+.kolom-selasa { background-color: #d9ffda !important; }
+.kolom-rabu   { background-color: #dadaff !important; }
+.kolom-kamis  { background-color: #fff9da !important; }
+
+/* Header Tabel Tampil Data tetap Biru Muda */
+.tampil-table th { 
+    background-color: #add8e6; 
+}
+
+/* --- 6. FOOTER (footer.html) --- */
+.footer-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+    padding: 10px 0; /* Memberi jarak agar tidak mepet garis */
+}
+
+.footer-text { 
+    font-weight: bold; 
+    font-size: 14px; 
+    margin: 0;
+    line-height: 1.5;
+}

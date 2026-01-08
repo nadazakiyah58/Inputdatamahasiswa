@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2 class="form-title">Jadwal Kuliah</h2>
+    
+    <table class="jadwal-table">
+        <thead>
+            <tr>
+                <th class="kolom-waktu">Waktu</th>
+                <th class="kolom-senin">Senin</th>
+                <th class="kolom-selasa">Selasa</th>
+                <th class="kolom-rabu">Rabu</th>
+                <th class="kolom-kamis">Kamis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="kolom-waktu">08:00 - 09:30</td>
+                <td class="kolom-senin">Matematika Diskrit</td>
+                <td class="kolom-selasa">Algoritma dan Pemrograman</td>
+                <td class="kolom-rabu" rowspan="2">Sistem Operasi</td>
+                <td class="kolom-kamis">Bahasa Inggris</td>
+            </tr>
+            <tr>
+                <td class="kolom-waktu">09:30 - 11:00</td>
+                <td class="kolom-senin">Jaringan Komputer</td>
+                <td class="kolom-selasa">Kalkulus</td>
+                <td class="kolom-kamis">Pemrograman Web</td>
+            </tr>
+            <tr>
+                <td class="kolom-waktu">11:00 - 12:30</td>
+                <td class="kolom-senin" colspan="2" style="background-color: #ffdada;">Proyek Akhir</td>
+                <td class="kolom-rabu">Pemrograman Mobile</td>
+                <td class="kolom-kamis" rowspan="2">Kecerdasan Buatan</td>
+            </tr>
+            <tr>
+                <td class="kolom-waktu">13:00 - 14:30</td>
+                <td class="kolom-senin">Manajemen Basis Data</td>
+                <td class="kolom-selasa">Arsitektur Komputer</td>
+                <td class="kolom-rabu">Keamanan Siber</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="kolom-waktu" style="font-weight: bold;">Istirahat</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
